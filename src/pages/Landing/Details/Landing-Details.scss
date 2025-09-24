@@ -1,0 +1,108 @@
+@import "../../../globals";
+
+.landing-details {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+}
+
+.details-section {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 2rem;
+    position: relative;
+    background: transparent;
+}
+
+.content-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding-top: 2rem;
+}
+
+.details-section.first-section {
+    min-height: 350px;
+}
+
+.content-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.content-left h2 {
+    font-size: 2.5rem;
+    color: $offwhite;
+    margin-bottom: 1rem;
+}
+
+.content-left p {
+    font-size: 1.15rem;
+    color: $offwhite;
+    margin-bottom: 0.5rem;
+}
+
+.background-blob {
+    position: absolute;
+    left: -60px;
+    top: -40px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.13;
+    z-index: 0;
+}
+
+.content-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+.values-list {
+    list-style: disc inside;
+    color: $offwhite;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .details-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .content-right, .content-left {
+        width: 100%;
+        align-items: flex-start;
+    }
+    .team-photo {
+        max-width: 100%;
+    }
+}
