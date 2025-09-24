@@ -1,0 +1,81 @@
+@import "./../../globals";
+
+.Landing {
+
+    .Content {
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+
+        .left {
+            flex: 0.4;
+            overflow: hidden;
+            justify-content: center;
+            display: flex;
+            margin: 30px;
+
+            img {
+                scale: 0.75;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .right {
+            flex: 0.6;
+            position: relative;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            margin-right: 10px;
+
+            .wrapper {
+                width: 100%;
+                height: 100%;
+                padding-left: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h1 {
+                    font-size: 65px;
+                    margin: 10px 0;
+                    color: $offwhite;
+                    position: relative;
+
+                    @media (max-width: 927px) {
+                        font-size: 40px;
+                    }
+                }
+
+                h2 {
+                    font-size: 40px;
+                    color: #FE5000;
+                    position: relative;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    color: #FE5000;
+                    position: relative;
+                    margin: 10px 0;
+
+                    span {
+                        margin: 10px 0;
+                        color: white;
+
+                        @media (max-width: 927px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                svg {
+                    position: absolute;
+                    padding-right: 5vw;
+                    opacity: 0.125;
+                    margin-top: 2rem;
+                    scale: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@import "../../globals";
+
+
+.intro {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      .wrapper h1 span {
+        color: $orange;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+
+.contact-form {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: $offblue;
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  gap: 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+
+  .left {
+    border-right: 1px solid $orange;
+    padding-right: 2rem;
+    min-width: 180px;
+    .details {
+      text-align: center;
+      .icon {
+        color: $orange!important;
+      }
+      .title {
+        letter-spacing: .9px;
+      }
+      .detail {
+        color: $grey;
+        font-size: 13px;
+        margin-top: 4px;
+      }
+    }
+
+    .location {
+      margin-top: 2.9rem;
+    }
+  }
+
+  .right {
+    flex: 1;
+    .form {
+      padding-left: 1rem;
+      .form-label {
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: .5px;
+      }
+      .form-div {
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
+        .form-label {
+          font-size: 16px;
+          font-weight: 300;
+          letter-spacing: .5px;
+        }
+        .name {
+          margin-left: 44.3px!important;
+        }
+        .form-controller {
+          background: $blue;
+          border: 1px solid $blue;
+          border-radius: 5px;
+          padding: 8px 0 8px 10px;
+          outline: none;
+          margin-left: 1rem;
+          width: 100%;
+          max-width: 320px;
+          &:hover {
+            border: 1px solid $offBlack;
+          }
+          &:focus {
+            border: 1px solid $offBlack;
+          }
+        }
+        .message {
+          margin-left: 0;
+          margin-top: 0.5rem;
+          font-size: 14px;
+          resize: none;
+          width: 100%;
+          min-height: 80px;
+        }
+        .btn {
+          padding: 10px 12px;
+          width: 100%;
+          background: #00243e;
+          border: 1px solid #00243e;
+          border-radius: 5px;
+          margin-left: 0;
+          margin-top: 1rem;
+          transition: background 0.2s, color 0.2s;
+          &:hover {
+            background: $offblue;
+            color: $grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .contact-form {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    .left {
+      border-right: none;
+      border-bottom: 1px solid $orange;
+      padding-right: 0;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+    .right {
+      padding-left: 0;
+    }
+  }
+}
